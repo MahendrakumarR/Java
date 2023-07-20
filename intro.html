@@ -1,0 +1,39 @@
+<!--
+
+    JavaScript is the world's most popular programming language.
+    JavaScript is the programming language of the Web.
+    JavaScript is easy to learn.
+
+-->
+<!--
+    One of many JavaScript HTML methods is getElementById().
+    The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript"
+-->
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">JavaScript can change HTML content.</p>
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+<br/>
+
+<p id="fontsize">JavaScript can change the style of an HTML element.</p>
+<!--This is used for increase the font size when clicking the button -->
+<button type="button" onclick="document.getElementById('fontsize').style.fontSize='35px'">Click Me!</button>  
+<br/>
+
+<p id="hide">JavaScript can hide HTML elements.</p><br/>
+<!--This is used for hide the content when clicking the button -->
+<button type="button" onclick="document.getElementById('hide').style.display='none'">Click Me!</button>
+<br/>
+
+
+<p>JavaScript can show hidden HTML elements.</p>
+<p id="show" style="display:none">Hello JavaScript!</p>
+<!--This is used for show the hiden content when clicking the button -->
+<button type="button" onclick="document.getElementById('show').style.display='block'">Click Me!</button>
+
+</body>
+</html>
