@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Datatypes</h1>
+<!--
+    JavaScript has 8 Datatypes
+
+    1. String
+    2. Number
+    3. Bigint
+    4. Boolean
+    5. Undefined
+    6. Null
+    7. Symbol
+    8. Object
+
+    The Object Datatype
+    The object data type can contain:
+
+    1. An object
+    2. An array
+    3. A date
+-->
+<p id="number"></p><br/>
+<p id="string"></p><br/>
+<p id="boolean"></p><br/>
+<p id="object"></p><br/>
+<p id="arrayobject"></p><br/>
+<p id="date"></p><br/>
+<script>
+
+// Numbers:
+
+let height = 16;
+let weight = 7.5;
+document.getElementById("number").innerHTML="Your Height:"+ height +" cm and Weight is:"+ weight +" kg";
+
+// Strings:
+let firstname = "Mitchale";
+let lastname = "Johnson";
+document.getElementById("string").innerHTML="Your Full name is " + firstname + " " + lastname;
+
+// Booleans
+let x = true;
+let y = false;
+document.getElementById("boolean").innerHTML=" X is " + x + " and Y is " + y ;
+
+// Object:
+const car = {name:"BMW", color:"green"};
+document.getElementById("object").innerHTML= car.color ;
+
+// Array object:
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("arrayobject").innerHTML= carsr ;
+
+// Date object:
+const date = new Date("2022-03-25"); 
+document.getElementById("date").innerHTML = date.toDateString();
+</script>
+
+
+</body>
+</html>

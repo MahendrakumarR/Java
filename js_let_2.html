@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<!--
+    
+    The let keyword was introduced in ES6 (2015)
+    Variables defined with let cannot be Redeclared
+    Variables defined with let must be Declared before use
+    Variables defined with let have Block Scope
+
+-->
+
+<h1>JavaScript Variables</h1>
+
+<p>In this example, x, y, and z are variables.</p>
+
+<p id="x"></p>
+
+<script>
+let x = 5;
+/*
+    here 'let' not allowed to redeclare they give errors | but 'var' allowed to redeclare more times
+    let x = "John Doe";                                  | var x = 5 ;
+    let x = 0;                                           | var x = 6;
+*/
+document.getElementById("x").innerHTML ="The value of x is: " + x ;
+</script>
+<br/>
+
+
+<p id="y"></p>
+
+<script>
+
+var y = 10;
+// Here y is 10
+
+{  
+  let y = 2;            // this is block scope 'let' only run inside the {}
+  // Here y is 2
+}
+
+// Here y is 10
+document.getElementById("y").innerHTML = y ;
+</script>
+
+</body>
+</html>
+
+

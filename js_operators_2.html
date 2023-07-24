@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Assignments</h1>
+<h2>Bitwise AND Assignment</h2>
+
+<!--============================ Bitwise AND =============================================-->
+<h3>The &= Operator</h3>
+<p id="&"></p>
+
+<script>
+let x = 35;        
+x &= 5;            // '&' used for converting decimal to binary then deliver the value of x
+document.getElementById("&").innerHTML = "Value of x is: " + x;
+</script>
+<br/>
+
+<!--============================ Bitwise OR =============================================-->
+<h3>The |= Operator</h3>
+
+<p id="|"></p>
+
+<script>
+let y = 100;
+y |= 5;             // '|' used for converting decimal to binary then deliver the value of y
+document.getElementById("|").innerHTML = "Value of y is: " + y;
+</script><br/>
+
+<!--============================ Bitwise XOR =============================================-->
+<h3>The ^= Operator</h3>
+<p id="^"></p>
+<script>
+let z = 100;
+z ^= 5;             // '^' used for converting decimal to binary then deliver the value of z
+document.getElementById("^").innerHTML = "Value of z is: " + z;
+</script><br/>
+
+<!--============================ Bitwise ? =============================================-->
+
+<h3>The ?= Operator</h3>
+<p>The ??= operator is used between two values. If the first value is undefined or null, the second value is assigned.</p>
+<p id="?"></p>
+<script>
+let p;
+document.getElementById("?").innerHTML = p ??= 5;  // '?' is used for null or undefined variable
+</script><br/>
+
+<!--============================ Bitwise Left Shift =============================================-->
+<h2>Left Shift Assignment</h2>
+<h3>The <<= Operator</h3>
+<p id="<<"></p>
+
+<script>
+let q = -100;
+q <<= 5;      // Also ''>>'' used               // '<<' used for converting decimal to binary then deliver the value of z
+document.getElementById("<<").innerHTML = "Value of q is: " + q;
+</script><br/>
+
+<!--
+    The Logical AND assignment operator is used between two values.
+    If the first value is true, the second value is assigned.
+-->
+<h3>The &&= Operator</h3>
+<p>If the first value is true, the second value is assigned.</p>
+
+<p id="&&"></p>
+
+<script>
+let r = 1;                 // here any one value is '0' then 'r' is '0' here no '0' values so 'r' choose any value finaly 'r' choose '5'
+r &&= 5;                    // same as '||'(opposite of '&&') and '??'
+document.getElementById("&&").innerHTML = "Value of r is: " + r;
+</script>
+
+
+</body>
+</html>
