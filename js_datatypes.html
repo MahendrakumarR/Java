@@ -5,20 +5,20 @@
 <!--
     JavaScript has 8 Datatypes
 
-    1. String
-    2. Number
-    3. Bigint
-    4. Boolean
-    5. Undefined
-    6. Null
-    7. Symbol
-    8. Object
+    1. String    - (Ex: let x = "hi"; )
+    2. Number    - (Ex: let x = 24 ; )
+    3. Bigint    - (Ex: let x = BigInt(1234567890..) )
+    4. Boolean   - (Ex: True or False)
+    5. Undefined - (Ex: let car = undefiend; or let car;)
+    6. Null      - (Ex: let x = null;)
+    7. Symbol    - (Ex: const mySymbol = Symbol(); )
+    8. Object    - (Ex: const car = { name:BMW, color:"red" } )
 
     The Object Datatype
     The object data type can contain:
 
-    1. An object
-    2. An array
+    1. An object - (Ex: const car = { name:BMW, color:"red" } )
+    2. An array  - (Ex: const cars = ["Saab", "Volvo", "BMW"];)
     3. A date
 -->
 <p id="number"></p><br/>
@@ -27,6 +27,8 @@
 <p id="object"></p><br/>
 <p id="arrayobject"></p><br/>
 <p id="date"></p><br/>
+<p id="bigint"></p>
+
 <script>
 
 // Numbers:
@@ -51,11 +53,17 @@ document.getElementById("object").innerHTML= car.color ;
 
 // Array object:
 const cars = ["Saab", "Volvo", "BMW"];
-document.getElementById("arrayobject").innerHTML= carsr ;
+document.getElementById("arrayobject").innerHTML= cars ;
 
 // Date object:
-const date = new Date("2022-03-25"); 
-document.getElementById("date").innerHTML = date.toDateString();
+const date = new Date();
+document.getElementById("date").innerHTML= date;
+
+// BigInt :
+let j = BigInt("123456789012345678901234567890");
+document.getElementById("bigint").innerHTML = j; 
+</script>
+        
 </script>
 
 

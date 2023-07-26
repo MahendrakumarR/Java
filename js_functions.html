@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--
+    A JavaScript function is a block of code designed to perform a particular task.
+    A JavaScript function is executed when "something" invokes it (calls it).
+-->
+
+<!--
+    
+    Why Functions?
+        With functions you can reuse code
+        You can write code that can be used many times.
+        You can use the same code with different arguments, to produce different results.
+
+-->
+
+<h1>JavaScript Functions</h1>
+
+<p>Call a function which performs a calculation and returns the result:</p>
+
+<p id="demo"></p>
+<p id="f"></p>
+
+<script>
+function myFunction(p1, p2) {
+  return p1 * p2;
+}
+let result = myFunction(4, 3);  // also use without the 'let'
+
+document.getElementById("demo").innerHTML = result;
+</script><br/>
+
+<!--=================== Using Parameter value ====================-->
+<script>
+function toCelsius(f) {
+  return (5/9) * (f-32);
+}
+
+let value = toCelsius(77);
+document.getElementById("f").innerHTML = value;
+</script>
+
+</body>
+</html>
