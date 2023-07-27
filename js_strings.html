@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--
+    JavaScript strings are for storing and manipulating text.
+-->
+
+
+<h1>JavaScript Strings</h1>
+<p>You can use quotes inside a string, as long as they don't match the quotes surrounding the string.</p>
+
+<p id="demo"></p><br>
+
+<p>The length of the string is:</p>
+<p id="length"></p><br>
+
+<p>The escape sequence \" inserts a double quote in a string.</p>
+<p id="double"></p><br>
+
+<h2>Never Create Strings as Objects</h2>
+<p>JavaScript objects cannot be compared.</p>
+<p id="com"></p><br>
+
+
+
+<!--=========================== Differnt quotes are used ===============================================-->
+
+<script>
+let answer1 = "It's alright";
+let answer2 = "He is called 'Johnny'";
+let answer3 = 'He is called "Johnny"'; 
+
+document.getElementById("demo").innerHTML =
+answer1 + "<br>" + answer2 + "<br>" + answer3; 
+
+//============================= Text length ================================================================
+
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("length").innerHTML = text.length;
+
+/*
+    Code 	Result 	Description         This three code are used for same qoutes are used inside the quotes and outside the quote.
+     \'    	 ' 	    Single quote           Ex: ( '\it's\ a new beginnig' ) Not print the '\' only all single qoutes printed
+     \" 	 " 	    Double quote           Ex: ( "\it"s\ a new beginnig" ) Not print the '\' only all double qoutes printed
+     \\ 	 \ 	    Backslash              Ex: ( "The character \\ is called backslash." ) Only print single back slash
+*/
+
+let t = "We are the so-called \"Vikings\" from the north.";  // Not show the slashes
+document.getElementById("double").innerHTML = t; 
+
+//============================= string objects =============================================================
+
+let x = new String("John");  // x is an object
+let y = new String("John");  // y is an object
+document.getElementById("com").innerHTML = (x==y); // This given error because object cannot compare
+
+
+
+</script>
+</body>
+</html>
+
+

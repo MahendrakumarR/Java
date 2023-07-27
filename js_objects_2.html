@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--
+    A method is a function stored as a property
+-->
+
+<!--
+    In an object method, 'this' refers to the object.
+    Alone, 'this' refers to the global object.
+    In a function, 'this' refers to the global object.
+    In a function, in strict mode, 'this' is undefined.
+    In an event, 'this' refers to the element that received the event.
+    Methods like call(), apply(), and bind() can refer 'this' to any object.
+
+-->
+
+<!--
+    'this' is not a variable. It is a keyword. You cannot change the value of this. 
+-->
+
+
+<h2>JavaScript Objects</h2>
+<p>An object method is a function definition, stored as a property value.</p>
+
+<p id="demo"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+</script>
+
+</body>
+</html>

@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 <body>
-    
+
+<!--
+    Do Not Declare Strings, Numbers, and Booleans as Objects!
+    Avoid String, Number, and Boolean objects. They complicate your code and slow down execution speed.
+-->
 <!--
     In real life, a car is an object.
     A car has properties like weight and color, and methods like start and stop
@@ -21,6 +25,26 @@ const car = {type:"Fiat", model:"500", color:"white"};
 
 // Display some data from the object:
 document.getElementById("demo").innerHTML = "The car type is : " + car.type;
+</script>
+
+<!--========================== Use another method of object ==================================-->
+
+
+<p>You can use person.property or person["property"].</p>
+
+<p id="object"></p>
+
+<script>
+// Create an object:
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id     :  5566
+};
+
+// Display some data from the object:
+document.getElementById("object").innerHTML =
+person["firstName"] + " " + person["lastName"];
 </script>
 
 </body>
