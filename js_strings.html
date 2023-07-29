@@ -22,6 +22,9 @@
 <p>JavaScript objects cannot be compared.</p>
 <p id="com"></p><br>
 
+<p>JavaScript variable and object are compared.</p>
+<p id="compa"></p><br>
+
 
 
 <!--=========================== Differnt quotes are used ===============================================-->
@@ -31,8 +34,7 @@ let answer1 = "It's alright";
 let answer2 = "He is called 'Johnny'";
 let answer3 = 'He is called "Johnny"'; 
 
-document.getElementById("demo").innerHTML =
-answer1 + "<br>" + answer2 + "<br>" + answer3; 
+document.getElementById("demo").innerHTML = answer1 + "<br>" + answer2 + "<br>" + answer3; 
 
 //============================= Text length ================================================================
 
@@ -55,7 +57,11 @@ let x = new String("John");  // x is an object
 let y = new String("John");  // y is an object
 document.getElementById("com").innerHTML = (x==y); // This given error because object cannot compare
 
+//============================ string and object commpare ==================================================
 
+let q = "John";        // x is a string
+let w = new String("John");  // y is an object
+document.getElementById("compa").innerHTML = (q==w);
 
 </script>
 </body>

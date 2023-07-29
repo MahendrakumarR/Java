@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--
+    String length                 String slice()
+    String substring()            String substr()    
+    String replace()              String replaceAll()
+    String toUpperCase()          String toLowerCase() 
+    String concat()               String trim()
+    String trimStart()            String trimEnd()
+    String padStart()             String padEnd()
+    String charAt()               String charCodeAt()
+    String split()
+-->
+<!--
+    There are 3 methods for extracting a part of a string:
+
+    slice(start, end)
+    substring(start, end)
+    substr(start, length)
+
+-->
+<!--============================= String length ========================================================-->
+
+<h2>JavaScript Strings</h2>
+<h2>The length Property</h2>
+
+<h2>The length of the string is</h2>
+<p id="len"></p><br>
+
+<h2>The Slice of the string is:</h2>
+<p id="slice"></p><br>
+
+<h2>Extract a part of a string from position 7</h2>
+<p id="ano"></p><br>
+
+<h2>The substring() method extract a part of a string and returns the extracted parts in a new string </h2>
+
+<p id="sub"></p>
+
+<h2>The substr() method extract a part of a string and returns the extracted parts in a new string </h2>
+    
+<p id="substr"></p><br>
+
+
+<h2>This is used for replace the word</h2>
+<p id="replace">Please visit Microsoft!</p><br>
+
+<h2>This is used for replace the word insensitive</h2>
+<p id="insensitive">Please visit Myweb</p><br>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="repl">Please visit Microsoft and Microsoft!</p><br>
+
+<h2>Replace all occurrences of "Microsoft" with "amazon" in the paragraph below </h2>
+<button onclick="newFunction()">Try it</button>
+<p id="glo">Please visit Microsoft and Microsoft!</p><br>
+
+<p id="newreall"></p><br>
+
+<h2>Lower case to upper case </h2>
+
+<button onclick="mFunction()">Try it</button>
+<p id="upp">Hello Earth!</p><br>
+
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("len").innerHTML = text.length;
+
+//================================= Slice ===================================================================
+
+// slice() extracts a part of a string and returns the extracted part in a new string
+
+let text1 = "Apple, Banana, Kiwi";
+let part = text1.slice(7,13);      // here A = 0 and i = 18  // 7- is start and 13-is end position strings only print
+document.getElementById("slice").innerHTML = part;
+
+//================================= Another Method of slice =================================================
+
+let text2 = "Apple, Banana, Kiwi";  
+let part2 = text.slice(7)          // same as the slice (-12) // here 7 - th position to print all words 
+document.getElementById("ano").innerHTML = part;
+
+//================================== substring() is similar to slice() =======================================
+
+let str = "Apple, Banana, Kiwi";
+document.getElementById("sub").innerHTML = str.substring(7,13); // 7- is start and 13-is end position strings only print
+
+//================================== substr() is similar to slice() ==========================================
+
+/*
+    The difference is that the second parameter specifies the length of the extracted part.
+*/
+
+let str1 = "Apple, Banana, Kiwi";
+document.getElementById("substr").innerHTML = str.substr(7,4);   // here '7' is position of the word and '4' is length of the word to print
+
+//================================== replace ===================================================================
+
+/*
+    The replace() method does not change the string it is called on.
+    The replace() method returns a new string.
+    The replace() method replaces only the first match
+    The replace() method is case sensitive.
+*/
+
+let re = "Please visit Microsoft!";
+let newText = re.replace("Microsoft", "Google");   // here replace the word
+document.getElementById("replace").innerHTML = newText;
+
+//================================== insensitive replace =========================================================
+
+/*
+    To replace case insensitive, use a regular expression with an /i flag (insensitive)
+*/
+let ins = "Please visit Myweb";
+let newins = ins.replace(/myWEb/i,"new web");     // here using 'i' for insensitive word to replace
+document.getElementById("insensitive").innerHTML = newins;
+
+//================================== replace another method ======================================================
+
+function myFunction() {
+  let text = document.getElementById("repl").innerHTML;              // here multiple same word are replaced when click the button
+  document.getElementById("repl").innerHTML =  text.replace("Microsoft","Google");
+}
+
+//================================== global replace ===============================================================
+
+function newFunction() {
+  let text = document.getElementById("glo").innerHTML; 
+  document.getElementById("glo").innerHTML =
+  text.replace(/Microsoft/g,"amazon");        // here 'g' used to replace all  microsoft word to amazon globaly
+}
+
+//================================= replace all ===================================================================
+
+let reall = "I love cats. Cats are very easy to love. Cats are very popular."
+newreall = reall.replaceAll("Cats","Dogs");                            // here all 'Cats' to 'Dogs' replace
+newreall = newreall.replaceAll("cats","dogs");                           // here all 'cats' to 'dogs' replace
+
+document.getElementById("newreall").innerHTML = newreall;
+
+//================================== lower to uppercase ===========================================================
+
+function mFunction() {
+  let text = document.getElementById("upp").innerHTML;
+  document.getElementById("upp").innerHTML = text.toUpperCase();
+}
+
+</script>
+
+</body>
+</html>
+
