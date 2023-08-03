@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--
+    Extracting String Characters
+
+    There are 3 methods for extracting string characters:
+
+        charAt(position)
+        charCodeAt(position)
+        Property access [ ]
+-->
+
+<!--
+
+    The charAt() method returns the character at a specified index (position) in a string 
+
+-->
+
+<h1>JavaScript String</h1>
+<h2>The charAt() Method</h2>
+
+<p>The charAt() method returns the character at a given position in a string:</p>
+
+<p id="demo"></p><br>
+
+<h2>The charCodeAt() method returns the unicode of the character at a given position in a string</h2>
+
+<p id="codeat"></p><br>
+
+<h1>Property access on strings</h1>
+<h2>The first character in the string is:</h2>
+<p id="pvalue"></p><br>
+
+<h1>JavaScript String Methods</h1>
+<p>Display the first array element, after a string split</p>
+
+<p id="arry"></p><br>
+
+<h2>The split().Method</h2>
+<p id="splt"></p>
+
+
+
+<script>
+
+//================================= charAt ===========================================================
+
+var text = "HELLO WORLD";
+document.getElementById("demo").innerHTML = text.charAt(4); // here 'o' printed becase index position of 'o' is '4'
+
+//================================== charCodeAt =======================================================
+
+/*
+    The charCodeAt() method returns the unicode of the character at a specified index in a string.
+    The method returns a UTF-16 code (an integer between 0 and 65535).
+*/
+let te = "HELLO WORLD";
+document.getElementById("codeat").innerHTML = te.charCodeAt(0);
+
+//=================================== property value ===================================================
+
+/*
+    ECMAScript 5 (2009) allows property access [ ] on strings.
+
+*/
+let tex = "HELLO WORLD";
+document.getElementById("pvalue").innerHTML = text[0];
+
+//==================================== string to array ===================================================
+
+let texte = "a,b,c,d,e,f";
+const myArray = texte.split(",");
+document.getElementById("arry").innerHTML = myArray[0];
+
+//===================================== string to array another method ====================================
+
+let texti = "Hello";
+const myArr = texti.split("");
+
+texi = "";
+for (let i = 0; i < myArr.length; i++) {
+  texi = texi + myArr[i] + "<br>"
+}
+document.getElementById("splt").innerHTML = texi;
+
+</script>
+</body>
+</html>
+

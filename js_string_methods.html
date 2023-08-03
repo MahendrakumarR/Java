@@ -65,6 +65,22 @@
 <button onclick="mFunction()">Try it</button>
 <p id="upp">Hello Earth!</p><br>
 
+<h2>The concat() method joins two or more strings</h2>
+<p id="concat"></p><br>
+
+<h2>The trim() Method</h2>
+<p id="trim"></p><br>
+
+<h2>The padStart() Method</h2>
+<p id="pads"></p><br>
+
+<h2>The padStart() method pads a string from the start.</h2>
+<h3>It pads the string with another string (multiple times) until it reaches a given length.</h3>
+
+<p id="padst"></p>
+
+
+
 
 <script>
 let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -147,8 +163,59 @@ document.getElementById("newreall").innerHTML = newreall;
 
 function mFunction() {
   let text = document.getElementById("upp").innerHTML;
-  document.getElementById("upp").innerHTML = text.toUpperCase();
+  document.getElementById("upp").innerHTML = text.toUpperCase();    // same as 'toLowerCase'
 }
+
+//=================================== concatination ===============================================================
+
+/*
+    concat() joins two or more strings
+*/
+
+let first = "Hello";
+let second = "World!";
+let concat = first.concat(" ",second); // use the 'double quotation' for giving the space between twowords
+document.getElementById("concat").innerHTML = concat;
+
+
+//==================================== trim =======================================================================
+
+/*
+    The trim() method removes whitespace from both sides of a string.
+    The trimStart() method works like trim(), but removes whitespace only from the start of a string.
+    The trimEnd() method works like trim(), but removes whitespace only from the end of a string.
+
+*/
+
+let trm = "     Hello World!     ";
+let trmf = trm.trim();                 // here using text length because identify the words have any space then count the word
+document.getElementById("trim").innerHTML ="Length text1 = " + trm.length + "<br>Length text2 = " + trmf.length;
+
+//==================================== string padStart and padEnd ================================================
+
+/*
+    padStart() and padEnd() to support padding at the beginning and at the end of a string.
+    The padStart() method is a string method.
+    The padEnd() method pads a string from the end
+*/
+// Pad a string with "0" until it reaches the length 8
+
+let pads = "8";             // here '8' is string not a number only use string
+text = pads.padStart(8,"1"); // here '7' numbers are '1' then '8' as mention '8' th number
+
+document.getElementById("pads").innerHTML = text;
+
+//==================================== string padStart another method =============================================
+
+/*
+  here padstart using number then convert to string then run the code
+*/
+let numb = 5;
+let t = numb.toString();
+document.getElementById("padst").innerHTML = t.padStart(4,1); // here '1' has no quotation used they work so use a qoutation or not they work properly
+
+// 
+
 
 </script>
 

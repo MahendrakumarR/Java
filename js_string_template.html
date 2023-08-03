@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--
+    
+    Template Literals
+    Template Strings
+    String Templates
+    Back-Tics Syntax
+
+-->
+<!--
+    Back-Tics Syntax
+    Template Literals use back-ticks (``) rather than the quotes ("") to define a string
+-->
+
+<h2>JavaScript Template Literals</h2>
+
+<h2>Template literals use back-ticks (``) to define a string</h2>
+<p id="demo"></p><br>
+
+<h2>Template literals allows multiline strings</h2>
+<p id="multi"></p><br>
+
+<h2>Template literals allows variables in strings</h2>
+<p id="vs"></p><br>
+
+<h2>Template literals allows variables in strings</h2>
+<p id="es"></p><br>
+
+<h2>Template literals allows variables in strings:</h2>
+<p id="ht"></p>
+
+
+<script>
+
+//===================================== Back-Tics =====================================================
+
+let text = `Hello world!`;
+document.getElementById("demo").innerHTML = text;
+
+//====================================== Back-Tics another method =====================================
+
+let mul =
+`The quick
+brown fox
+jumps over
+the lazy dog`;
+document.getElementById("multi").innerHTML = mul;
+
+//======================================= Interpolation ================================================
+
+/*
+    Template literals provide an easy way to interpolate variables and expressions into strings.
+    The method is called string interpolation.
+*/
+
+/*
+    syntax:
+        ${...}
+*/
+
+//========================================= Variable Substitutions ======================================
+
+/*
+    Template literals allow variables in strings
+*/
+
+let firstName = "Mahendra";
+let lastName = "kumar";
+
+let su = `Welcome ${firstName}, ${lastName}!`;
+document.getElementById("vs").innerHTML = su;
+
+//========================================== Expression Substitution =====================================
+
+/*
+    Template literals allow expressions in strings
+*/
+
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`; // here using 'toFixed' for howmany decimal points want here 2 decimals
+document.getElementById("es").innerHTML = total;
+
+//============================================ Html Templates =============================================
+
+let header = "Templates Literals";
+let tags = ["template literals", "javascript", "es6"];
+
+let html = `<h2>${header}</h2>`;
+
+for (const x of tags) {
+  html += `<ul><li>${x}</li></ul>`;
+}
+document.getElementById("ht").innerHTML = html;
+
+</script>
+
+</body>
+</html>

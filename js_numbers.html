@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<!--
+    JavaScript Numbers are Always 64-bit Floating Point
+--> 
+
+<!--
+    JavaScript has only one type of number. Numbers can be written with or without decimals.
+-->
+
+<h2>JavaScript Numbers</h2>
+<h2>Numbers can be written with or without decimals</h2>
+<p id="demo"></p><br>
+
+<h2>If you add two numbers, the result will be a number:</h2>
+<p id="add"></p><br>
+
+<h2>JavaScript will try to convert strings to numbers when subtracting:</h2>
+<p id="ss"></p>
+
+<script>
+
+//====================================== Sample of float Precision and integer Precision ==============================
+
+let x = 3.14;
+let y = 3;
+document.getElementById("demo").innerHTML = x + "<br>" + y;
+
+
+//====================================== Add two numbers ===============================================================
+
+/*
+    JavaScript uses the + operator for both addition and concatenation.
+    Numbers are added. Strings are concatenated.
+*/
+let q = 10;
+let w = 20;
+let z = q + w;   // Also use -,/,*,% 
+document.getElementById("add").innerHTML = z;
+
+//======================================= Subtract two numbers declare in string =======================================
+
+let e = "100";
+let r = "10";                                  // Also use *,/,% but not use '+' symbol only concatenate two string
+let t = e - r;                                       // here number declare inside a double qoutation 
+document.getElementById("ss").innerHTML = t;  // Result is: 90
+
+</script>
+
+</body>
+</html>
